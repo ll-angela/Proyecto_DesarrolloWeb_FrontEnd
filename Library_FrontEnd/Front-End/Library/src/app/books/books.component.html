@@ -1,0 +1,25 @@
+<h1>Lista de libros</h1>
+<div class="container mt-4 vj-destacados">
+  <div class="row">
+    <div class="col col-md-12 text-right mb-4">
+      <a href="#" class="btn btn-outline-success">Crear Libro</a>
+    </div>
+  </div>
+  <div class="row">
+    <div *ngFor="let book of books" class="col-md-3 mb-4">
+      <div class="card">
+        <img [src]="book.image_url" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title" >{{book.name}}</h5>
+          <p>
+            <a href="searchBookByEditorial(book)" class="badge text-bg-info" [text]="">{{getEditorial(book.editorial_id)}}</a>
+          </p>
+          <p class="card-text" >{{book.description}}</p>
+        </div>
+        <div class="card-footer text-muted">
+          <a href="bookdetails" class="btn btn-primary">Detalle</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
