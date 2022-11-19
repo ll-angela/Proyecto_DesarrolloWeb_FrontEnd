@@ -8,8 +8,17 @@
     <input class="form-control mr-sm-2" type="search" placeholder="Buscar " aria-label="Search">
     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
     </form>
+    <a class="btn-secondary" href="bookadmin" *ngIf="loged">
+      <button type="button" class="btn btn-outline-secondary">Libros</button>
+    </a>
+    <a class="btn-secondary" href="useradmin" *ngIf="loged">
+      <button type="button" class="btn btn-outline-secondary">Usuarios</button>
+    </a>
     <a class="btn-success" href="login">
       <button type="button" class="btn btn-success">Login</button>
+    </a>
+    <a class="btn-success" href="/" (click)="logout()" *ngIf="loged">
+      <button type="button" class="btn btn-success">Logout</button>
     </a>
  </div>
 </nav>

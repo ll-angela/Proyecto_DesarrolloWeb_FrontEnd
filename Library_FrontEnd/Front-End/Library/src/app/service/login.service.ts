@@ -29,4 +29,8 @@ export class LoginService {
   getToken() {
     return this.cookies.get("token"); //Recupera el valor de la cookie
   }
+
+  logout() {
+    this.cookies.deleteAll();
+  }
 }

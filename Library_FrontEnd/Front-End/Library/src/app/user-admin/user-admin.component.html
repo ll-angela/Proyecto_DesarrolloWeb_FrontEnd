@@ -1,0 +1,42 @@
+<a href="createuser" class="btn btn-outline-success">Crear Usuario</a>
+<a href="updateuser" class="btn btn-outline-success">Modificar Usuario</a>
+<a href="inactivate" class="btn btn-outline-success">Inactivar Usuario</a>
+
+<table class="table">
+  <thead>
+  <tr>
+    <th>id</th>
+    <th>Nombre</th>
+    <th>Apellido</th>
+    <th>Fecha de nacimiento</th>
+    <th>Rol</th>
+    <th>Activo</th>
+    <th>Username</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let user of users">
+    <td>{{user.id}}</td>
+    <td>{{user.name}}</td>
+    <td>{{user.last_name}}</td>
+    <td>{{user.birth_date}}</td>
+    <td>{{user.position}}</td>
+    <td>{{user.active}}</td>
+    <td>{{user.username}}</td>
+  </tr>
+  </tbody>
+</table>
+
+<nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+    <li class="page-item disabled">
+      <a class="page-link">Previous</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav>

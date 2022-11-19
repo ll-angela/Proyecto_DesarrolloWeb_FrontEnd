@@ -1,0 +1,61 @@
+<section class="vh-100">
+  <div class="container-fluid h-custom">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-9 col-lg-6 col-xl-5">
+        <img src="https://img.freepik.com/free-vector/user-research-concept-illustration_114360-8143.jpg?w=2000"
+             class="img-fluid" alt="Sample image">
+      </div>
+      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+        <form class="custom-form" [formGroup]="createForm" (ngSubmit)="onSubmit()">
+          <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
+            <p class="lead fw-normal mb-0 me-3">Crear usuario</p>
+          </div>
+          <div class="divider d-flex align-items-center my-4">
+          </div>
+
+          <!-- Name input -->
+          <div class="form-outline mb-4">
+            <label class="form-label" for="userName">Nombre</label>
+            <input type="text" formControlName="name" id="userName" class="form-control form-control-lg"
+                   placeholder="Ingrese el nombre" required="required" />
+          </div>
+
+          <!-- Last name input -->
+          <div class="form-outline mb-4">
+            <label class="form-label" for="userLN">Apellido</label>
+            <input type="text" formControlName="last_name" id="userLN" class="form-control form-control-lg"
+                   placeholder="Ingrese el apellido" required="required" />
+          </div>
+
+          <!-- Birth date input -->
+          <div class="form-outline mb-4">
+            <label class="form-label" for="userBD">Fecha de nacimiento</label>
+            <input type="text" formControlName="birth_date" id="userBD" class="form-control form-control-lg"
+                   placeholder="dd/mm/aaaa" required="required" />
+          </div>
+
+          <!-- Username input -->
+          <div class="form-outline mb-4">
+            <label class="form-label" for="userUsername">Nombre de usuario</label>
+            <input type="text" formControlName="username" id="userUsername" class="form-control form-control-lg"
+                   placeholder="Ingrese un username" required="required" />
+          </div>
+
+          <!-- Password input -->
+          <div class="form-outline mb-4">
+            <label class="form-label" for="userPass">Contraseña</label>
+            <input type="password" formControlName="password" id="userPass" class="form-control form-control-lg"
+                   placeholder="Ingrese una contraseña" required="required" />
+          </div>
+
+
+          <div class="text-center text-lg-start mt-4 pt-2">
+            <button type="submit" class="btn btn-success btn-lg"
+                    style="padding-left: 2.5rem; padding-right: 2.5rem;">Crear</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

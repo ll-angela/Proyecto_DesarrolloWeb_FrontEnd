@@ -1,0 +1,69 @@
+<section class="vh-100">
+  <div class="container-fluid h-custom">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-9 col-lg-6 col-xl-5">
+        <img src="https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books_23-2149334862.jpg?w=2000"
+             class="img-fluid" alt="Sample image">
+      </div>
+      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+        <form class="custom-form" [formGroup]="createForm" (ngSubmit)="onSubmit()">
+          <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
+            <p class="lead fw-normal mb-0 me-3">Crear libro</p>
+          </div>
+          <div class="divider d-flex align-items-center my-4">
+          </div>
+
+          <!-- Name input -->
+          <div class="form-outline mb-4">
+            <label class="form-label" for="bookName">Nombre del libro</label>
+            <input type="text" formControlName="name" id="bookName" class="form-control form-control-lg"
+                   placeholder="Ingrese el nombre del libro" required="required" />
+          </div>
+
+          <!-- Description input -->
+          <div class="form-outline mb-4">
+            <label class="form-label" for="bookDesc">Descripción del libro</label>
+            <input type="text" formControlName="description" id="bookDesc" class="form-control form-control-lg"
+                   placeholder="Ingrese la descripción del libro" required="required" />
+          </div>
+
+          <!-- Image URL input -->
+          <div class="form-outline mb-4">
+            <label class="form-label" for="bookImg">URL de la portada</label>
+            <input type="text" formControlName="image_url" id="bookImg" class="form-control form-control-lg"
+                   placeholder="Ingrese la URL de la portada" required="required" />
+          </div>
+
+          <!-- Editorial input -->
+          <div class="form-outline mb-4">
+            <label class="form-label" >Editorial</label>
+            <select formControlName="editorial_id" name="selectedLevel">
+              <option *ngFor="let edit of editorials" [ngValue]="edit.id"> {{edit.name}}</option>
+            </select>
+          </div>
+
+          <!-- Edit Date input -->
+          <div class="form-outline mb-4">
+            <label class="form-label" for="bookEditDate">Fecha de edición</label>
+            <input type="text" formControlName="edit_date" id="bookEditDate" class="form-control form-control-lg"
+                   placeholder="dd/mm/aaaa" required="required" />
+          </div>
+
+          <!-- Amount input -->
+          <div class="form-outline mb-4">
+            <label class="form-label" for="bookAmount">Cantidad</label>
+            <input type="number" formControlName="amount" id="bookAmount" class="form-control form-control-lg"
+                   placeholder="Ingrese la cantidad de libros" required="required" />
+          </div>
+
+
+          <div class="text-center text-lg-start mt-4 pt-2">
+            <button type="submit" class="btn btn-success btn-lg"
+                    style="padding-left: 2.5rem; padding-right: 2.5rem;">Crear</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
